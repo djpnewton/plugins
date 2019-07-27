@@ -1,8 +1,6 @@
 package clipboard_manager
 
 import (
-	"fmt"
-	"os/exec"
 	"runtime"
 
 	"github.com/go-flutter-desktop/go-flutter"
@@ -37,7 +35,7 @@ func (p *ClipboardManagerPlugin) copyToClipBoard(arguments interface{}) (reply i
 	case "windows":
         fallthrough
 	case "darwin":
-        err = WriteAll(text)
+        err = clipboard.WriteAll(text)
 	default:
 		err = errors.New("Unsupported platform")
 	}
