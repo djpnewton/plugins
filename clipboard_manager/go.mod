@@ -1,4 +1,4 @@
-module github.com/go-flutter-desktop/plugins/clipboard_manager
+module github.com/djpnewton/plugins/clipboard_manager
 
 go 1.12
 
